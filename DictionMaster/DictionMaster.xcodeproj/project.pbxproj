@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B1BCB4312B7151E600B83A8D /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BCB4302B7151E600B83A8D /* Color.swift */; };
+		B1BCB4352B7153DF00B83A8D /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BCB4342B7153DF00B83A8D /* LaunchScreenView.swift */; };
 		B1C1980D2B710F4B006CB97D /* DictionMasterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C1980C2B710F4B006CB97D /* DictionMasterApp.swift */; };
 		B1C1980F2B710F4B006CB97D /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C1980E2B710F4B006CB97D /* SearchView.swift */; };
 		B1C198112B710F4D006CB97D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1C198102B710F4D006CB97D /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 
 /* Begin PBXFileReference section */
 		B1BCB4302B7151E600B83A8D /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		B1BCB4342B7153DF00B83A8D /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
 		B1C198092B710F4B006CB97D /* DictionMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DictionMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1C1980C2B710F4B006CB97D /* DictionMasterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionMasterApp.swift; sourceTree = "<group>"; };
 		B1C1980E2B710F4B006CB97D /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
@@ -40,6 +42,14 @@
 				B1BCB4302B7151E600B83A8D /* Color.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B1BCB4332B7153C700B83A8D /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				B1BCB4342B7153DF00B83A8D /* LaunchScreenView.swift */,
+			);
+			path = LaunchScreen;
 			sourceTree = "<group>";
 		};
 		B1C198002B710F4B006CB97D = {
@@ -81,6 +91,7 @@
 		B1C1981A2B711935006CB97D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B1BCB4332B7153C700B83A8D /* LaunchScreen */,
 				B1C1980E2B710F4B006CB97D /* SearchView.swift */,
 			);
 			path = Views;
@@ -167,6 +178,7 @@
 				B1C1980F2B710F4B006CB97D /* SearchView.swift in Sources */,
 				B1C1980D2B710F4B006CB97D /* DictionMasterApp.swift in Sources */,
 				B1BCB4312B7151E600B83A8D /* Color.swift in Sources */,
+				B1BCB4352B7153DF00B83A8D /* LaunchScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
