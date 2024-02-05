@@ -17,6 +17,7 @@
 		B1DAB32D2B7168930023D92A /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DAB32C2B7168930023D92A /* PrimaryButton.swift */; };
 		B1DAB32F2B716E300023D92A /* CustomFlagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DAB32E2B716E300023D92A /* CustomFlagView.swift */; };
 		B1DAB3312B717F3B0023D92A /* DefinitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DAB3302B717F3B0023D92A /* DefinitionView.swift */; };
+		B1DAB3332B718AE60023D92A /* MultiColorText.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DAB3322B718AE60023D92A /* MultiColorText.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		B1DAB32C2B7168930023D92A /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		B1DAB32E2B716E300023D92A /* CustomFlagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFlagView.swift; sourceTree = "<group>"; };
 		B1DAB3302B717F3B0023D92A /* DefinitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefinitionView.swift; sourceTree = "<group>"; };
+		B1DAB3322B718AE60023D92A /* MultiColorText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiColorText.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				B1DAB32C2B7168930023D92A /* PrimaryButton.swift */,
 				B1DAB32E2B716E300023D92A /* CustomFlagView.swift */,
 				B1DAB3302B717F3B0023D92A /* DefinitionView.swift */,
+				B1DAB3322B718AE60023D92A /* MultiColorText.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 				B1BCB4352B7153DF00B83A8D /* LaunchScreenView.swift in Sources */,
 				B1DAB3312B717F3B0023D92A /* DefinitionView.swift in Sources */,
 				B1DAB32F2B716E300023D92A /* CustomFlagView.swift in Sources */,
+				B1DAB3332B718AE60023D92A /* MultiColorText.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
