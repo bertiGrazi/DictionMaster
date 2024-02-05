@@ -9,9 +9,26 @@ import SwiftUI
 
 @main
 struct DictionMasterApp: App {
+    @State private var showLaunchScreen: Bool = true
+    
     var body: some Scene {
         WindowGroup {
-            LaunchScreenView()
+            ZStack {
+                NavigationView {
+                    SearchView()
+                        .background(Color.red)
+                    
+                    if showLaunchScreen {
+                        LaunchScreenView(showLaunchScreen: $showLaunchScreen)
+                            .transition(.move(edge: .leading))
+                            .zIndex(2.0)
+                            .onDisappear {
+                                print("ContentView disappeared")
+                            }
+                    }
+                    
+                }
+            }
         }
     }
 }
