@@ -14,6 +14,7 @@
 		B1C1980F2B710F4B006CB97D /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C1980E2B710F4B006CB97D /* SearchView.swift */; };
 		B1C198112B710F4D006CB97D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1C198102B710F4D006CB97D /* Assets.xcassets */; };
 		B1C198142B710F4D006CB97D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1C198132B710F4D006CB97D /* Preview Assets.xcassets */; };
+		B1DAB32D2B7168930023D92A /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DAB32C2B7168930023D92A /* PrimaryButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		B1C1980E2B710F4B006CB97D /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		B1C198102B710F4D006CB97D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1C198132B710F4D006CB97D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B1DAB32C2B7168930023D92A /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 		B1C1980B2B710F4B006CB97D /* DictionMaster */ = {
 			isa = PBXGroup;
 			children = (
+				B1DAB32B2B7168720023D92A /* Components */,
 				B1BCB42F2B7151D200B83A8D /* Extensions */,
 				B1C1980C2B710F4B006CB97D /* DictionMasterApp.swift */,
 				B1C1981A2B711935006CB97D /* Views */,
@@ -106,6 +109,14 @@
 				B1C198102B710F4D006CB97D /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		B1DAB32B2B7168720023D92A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B1DAB32C2B7168930023D92A /* PrimaryButton.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +192,7 @@
 			files = (
 				B1C1980F2B710F4B006CB97D /* SearchView.swift in Sources */,
 				B1C1980D2B710F4B006CB97D /* DictionMasterApp.swift in Sources */,
+				B1DAB32D2B7168930023D92A /* PrimaryButton.swift in Sources */,
 				B1BCB4312B7151E600B83A8D /* Color.swift in Sources */,
 				B1BCB4352B7153DF00B83A8D /* LaunchScreenView.swift in Sources */,
 			);
