@@ -17,7 +17,7 @@ struct DefinitionView: View {
     }
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .leading, spacing: 16) {
             ForEach(definitions.indices, id: \.self) { index in
                 Text("\(index+1)) \(definitions[index].text)")
                     .font(.title3)
