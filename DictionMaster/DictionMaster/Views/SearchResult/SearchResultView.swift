@@ -19,10 +19,21 @@ struct SearchResultView: View {
                                 .bold()
                                 .padding(.top, 16)
                             
+                        HStack(spacing: 12) {
+                            Button(action: {
+                                print("clicou play")
+                            }) {
+                                Image("audioSpeaker")
+                                    .frame(width: 52, height: 52)
+                                    .background(Color.theme.buttonColor)
+                                    .clipShape(Circle())
+                            }
+                            
                             Text("/ˌedʒuˈkeɪʃn/")
                                 .foregroundStyle(Color.theme.textSecondaryColor)
                                 .bold()
                                 .font(.custom("", size: 25))
+                        }
                             
                             DefinitionView(definitions: [
                                 DefinitionView.Definition(text: "Furniture with a top surface to accommodate a variety of uses.", example: "I bought a new table for the dining room."),
