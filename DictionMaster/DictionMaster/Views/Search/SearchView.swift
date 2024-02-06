@@ -19,13 +19,23 @@ struct SearchView: View {
                 
                 Spacer()
                 
-                TextField("Enter your text", text: $text)
+                TextField("", text: $text)
                     .padding()
                     .font(.custom("SF Pro Rounded", size: 38))
-                    .foregroundColor(Color.theme.grayColor)
+                    .foregroundColor(Color.theme.textPrimaryColor)
                     .padding(.horizontal, 8)
                     .padding(.vertical, 10)
                     .multilineTextAlignment(.center)
+                
+                if text.isEmpty {
+                    TextField("Enter your text", text: $text)
+                        .padding()
+                        .font(.custom("SF Pro Rounded", size: 38))
+                        .foregroundColor(Color.theme.grayColor)
+                        .padding(.horizontal, 8)
+                        .padding(.vertical, 10)
+                        .multilineTextAlignment(.center)
+                }
                     
                 
                 Spacer()
