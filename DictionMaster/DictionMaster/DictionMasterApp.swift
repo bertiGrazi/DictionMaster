@@ -15,8 +15,8 @@ struct DictionMasterApp: App {
         WindowGroup {
             ZStack {
                 NavigationView {
-                    SearchView()
-                        .background(Color.red)
+                    //SearchView()
+                    PurchaseView()
                     
                     if showLaunchScreen {
                         LaunchScreenView(showLaunchScreen: $showLaunchScreen)

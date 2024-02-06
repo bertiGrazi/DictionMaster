@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B1637F772B726D2600377DCF /* PurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1637F762B726D2600377DCF /* PurchaseView.swift */; };
 		B1BCB4312B7151E600B83A8D /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BCB4302B7151E600B83A8D /* Color.swift */; };
 		B1BCB4352B7153DF00B83A8D /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BCB4342B7153DF00B83A8D /* LaunchScreenView.swift */; };
 		B1BCB4372B715C3200B83A8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1BCB4362B715C3200B83A8D /* LaunchScreen.storyboard */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B1637F762B726D2600377DCF /* PurchaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseView.swift; sourceTree = "<group>"; };
 		B1BCB4302B7151E600B83A8D /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		B1BCB4342B7153DF00B83A8D /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
 		B1BCB4362B715C3200B83A8D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -46,6 +48,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B1637F742B726D0700377DCF /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				B1C1980E2B710F4B006CB97D /* SearchView.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		B1637F752B726D1000377DCF /* Purchase */ = {
+			isa = PBXGroup;
+			children = (
+				B1637F762B726D2600377DCF /* PurchaseView.swift */,
+			);
+			path = Purchase;
+			sourceTree = "<group>";
+		};
 		B1BCB42F2B7151D200B83A8D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -103,8 +121,9 @@
 		B1C1981A2B711935006CB97D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B1637F752B726D1000377DCF /* Purchase */,
 				B1BCB4332B7153C700B83A8D /* LaunchScreen */,
-				B1C1980E2B710F4B006CB97D /* SearchView.swift */,
+				B1637F742B726D0700377DCF /* Search */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -202,6 +221,7 @@
 				B1C1980F2B710F4B006CB97D /* SearchView.swift in Sources */,
 				B1C1980D2B710F4B006CB97D /* DictionMasterApp.swift in Sources */,
 				B1DAB32D2B7168930023D92A /* PrimaryButton.swift in Sources */,
+				B1637F772B726D2600377DCF /* PurchaseView.swift in Sources */,
 				B1BCB4312B7151E600B83A8D /* Color.swift in Sources */,
 				B1BCB4352B7153DF00B83A8D /* LaunchScreenView.swift in Sources */,
 				B1DAB3312B717F3B0023D92A /* DefinitionView.swift in Sources */,
