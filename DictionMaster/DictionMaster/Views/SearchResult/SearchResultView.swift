@@ -32,10 +32,13 @@ struct SearchResultView: View {
                                 .clipShape(Circle())
                         }
                         
-                        Text("/ˌedʒuˈkeɪʃn/")
-                            .foregroundStyle(Color.theme.textSecondaryColor)
-                            .bold()
-                            .font(.custom("", size: 25))
+                        ForEach(viewModel.phonetics, id: \.self) { phonetic in
+                            Text(phonetic.text ?? "")
+                                .foregroundStyle(Color.theme.textSecondaryColor)
+                                .bold()
+                                .font(.custom("", size: 25))
+                        }
+
                     }
                     
                     ForEach(viewModel.meanings, id: \.self) { meaning in
@@ -69,6 +72,7 @@ struct SearchResultView: View {
         }
         .onAppear {
             viewModel.fetchMeanings(for: searchText)
+            viewModel.getWordPhonetics(for: searchText)
         }
     }
 }

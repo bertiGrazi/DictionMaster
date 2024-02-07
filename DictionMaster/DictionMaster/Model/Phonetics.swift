@@ -13,3 +13,19 @@ struct Phonetics: Codable {
     let sourceURL: String?
     let license: License?
 }
+
+extension Phonetics: Hashable {
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(text)
+        hasher.combine(audio)
+        hasher.combine(sourceURL)
+        hasher.combine(license)
+    }
+    
+    static func == (lhs: Phonetics, rhs: Phonetics) -> Bool {
+        return lhs.text == rhs.text &&
+        lhs.audio == rhs.audio &&
+        lhs.sourceURL == rhs.sourceURL &&
+        lhs.license == rhs.license
+    }
+}
