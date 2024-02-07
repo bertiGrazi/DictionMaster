@@ -12,8 +12,8 @@ final class DictionaryMeaningsViewModel: ObservableObject {
     
     @Published var meanings: [Meanings] = []
     
-    public func fetchMeanings() {
-        service.getWordMeanings { [weak self] result in
+    public func fetchMeanings(for word: String) {
+        service.getWordMeanings(for: word) { [weak self] result in
             DispatchQueue.main.async {
                 switch result {
                 case .success(let models):

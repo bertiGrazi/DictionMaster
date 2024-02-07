@@ -10,8 +10,8 @@ import Foundation
 final class APIService {
     init() {}
     
-    func getWordMeanings(completion: @escaping(Result<[Meanings], Error>) -> Void) {
-        guard let url = URL(string: "https://api.dictionaryapi.dev/api/v2/entries/en/table") else { return }
+    func getWordMeanings(for word: String,  completion: @escaping(Result<[Meanings], Error>) -> Void) {
+        guard let url = URL(string: "https://api.dictionaryapi.dev/api/v2/entries/en/\(word)") else { return }
         
         let request = URLRequest(url: url)
         
