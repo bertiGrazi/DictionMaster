@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SearchResultView: View {
+    
     var body: some View {
         ZStack {
             ScrollView {

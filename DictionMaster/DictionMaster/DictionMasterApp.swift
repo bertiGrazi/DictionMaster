@@ -15,8 +15,8 @@ struct DictionMasterApp: App {
         WindowGroup {
             ZStack {
                 NavigationView {
-                   // SearchView()
-                    SearchResultView()
+                   SearchView()
+                    //SearchResultView()
                     
                     if showLaunchScreen {
                         LaunchScreenView(showLaunchScreen: $showLaunchScreen)

@@ -10,6 +10,8 @@ import SwiftUI
 struct SearchView: View {
     @State private var text: String = ""
     
+    @StateObject var viewModel = DictionaryMeaningsViewModel()
+    
     var body: some View {
         
         GeometryReader { geometry in
@@ -37,6 +39,11 @@ struct SearchView: View {
                         .multilineTextAlignment(.center)
                 }
                     
+                List(viewModel.meanings, id: \.self) { meaning in
+                    Text(meaning.partOfSpeech ?? "Teste")
+                        .bold()
+                        .foregroundStyle(Color.red)
+                }
                 
                 Spacer()
                 
@@ -46,7 +53,9 @@ struct SearchView: View {
                 .padding(.horizontal, 20)
                 .padding(.bottom, 10)
             }
-            
+            .onAppear {
+                viewModel.fetchMeanings()
+            }
         }
     }
 }

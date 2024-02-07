@@ -26,11 +26,22 @@ final class APIService {
             }
             
             do {
-                let response = try JSONDecoder().decode(DictionaryResponse.self, from: data)
-                completion(.success(response.meanings))
+                let response = try JSONDecoder().decode([DictionaryResponse].self, from: data)
+                print("Meu response: \(response as Any)")
+                for each in response {
+                    print("Meu response: \(each)")
+                    print("Meu response: \(each.meanings)")
+                    print(each)
+                    print()
+                    completion(.success(each.meanings ?? []))
+                }
+                
             } catch {
                 let json = try? JSONSerialization.jsonObject(with: data)
-                print(String(describing: json))
+               print("Erro ao decofificar JSON: ", error)
+                if let json = json {
+                    print("json inválido: ", json)
+                }
                 completion(.failure(error))
             }
         }

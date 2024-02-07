@@ -18,7 +18,7 @@
 		B1D7E62C2B72C72600DFAA1E /* SearchResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D7E62B2B72C72600DFAA1E /* SearchResultView.swift */; };
 		B1DA23B22B73E3F700507B86 /* DictionaryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DA23B12B73E3F700507B86 /* DictionaryResponse.swift */; };
 		B1DA23B42B73E61D00507B86 /* Phonetics.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DA23B32B73E61D00507B86 /* Phonetics.swift */; };
-		B1DA23B62B73E65E00507B86 /* Definition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DA23B52B73E65E00507B86 /* Definition.swift */; };
+		B1DA23B62B73E65E00507B86 /* Definitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DA23B52B73E65E00507B86 /* Definitions.swift */; };
 		B1DA23B82B73E67700507B86 /* Meanings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DA23B72B73E67700507B86 /* Meanings.swift */; };
 		B1DA23BA2B73E68F00507B86 /* License.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DA23B92B73E68F00507B86 /* License.swift */; };
 		B1DA23BD2B73E6E400507B86 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DA23BC2B73E6E400507B86 /* APIService.swift */; };
@@ -42,7 +42,7 @@
 		B1D7E62B2B72C72600DFAA1E /* SearchResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultView.swift; sourceTree = "<group>"; };
 		B1DA23B12B73E3F700507B86 /* DictionaryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryResponse.swift; sourceTree = "<group>"; };
 		B1DA23B32B73E61D00507B86 /* Phonetics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phonetics.swift; sourceTree = "<group>"; };
-		B1DA23B52B73E65E00507B86 /* Definition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Definition.swift; sourceTree = "<group>"; };
+		B1DA23B52B73E65E00507B86 /* Definitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Definitions.swift; sourceTree = "<group>"; };
 		B1DA23B72B73E67700507B86 /* Meanings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meanings.swift; sourceTree = "<group>"; };
 		B1DA23B92B73E68F00507B86 /* License.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = License.swift; sourceTree = "<group>"; };
 		B1DA23BC2B73E6E400507B86 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
@@ -70,7 +70,7 @@
 				B1DA23B12B73E3F700507B86 /* DictionaryResponse.swift */,
 				B1DA23B92B73E68F00507B86 /* License.swift */,
 				B1DA23B72B73E67700507B86 /* Meanings.swift */,
-				B1DA23B52B73E65E00507B86 /* Definition.swift */,
+				B1DA23B52B73E65E00507B86 /* Definitions.swift */,
 				B1DA23B32B73E61D00507B86 /* Phonetics.swift */,
 			);
 			path = Model;
@@ -283,7 +283,7 @@
 				B1DAB32D2B7168930023D92A /* PrimaryButton.swift in Sources */,
 				B1DA23BD2B73E6E400507B86 /* APIService.swift in Sources */,
 				B1637F772B726D2600377DCF /* PurchaseView.swift in Sources */,
-				B1DA23B62B73E65E00507B86 /* Definition.swift in Sources */,
+				B1DA23B62B73E65E00507B86 /* Definitions.swift in Sources */,
 				B1DA23B42B73E61D00507B86 /* Phonetics.swift in Sources */,
 				B1BCB4312B7151E600B83A8D /* Color.swift in Sources */,
 				B1BCB4352B7153DF00B83A8D /* LaunchScreenView.swift in Sources */,

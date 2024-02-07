@@ -8,11 +8,11 @@
 import Foundation
 
 struct DictionaryResponse: Codable {
-    let word: String
-    let phonetics: [Phonetics]
-    let meanings: [Meanings]
+    let word: String?
+    let phonetics: [Phonetics]?
+    let meanings: [Meanings]?
     let license: License?
-    let sourceUrls: [String]
+    let sourceUrls: [String]?
 }
 
 
