@@ -15,18 +15,7 @@ struct DictionMasterApp: App {
         WindowGroup {
             ZStack {
                 NavigationView {
-                   // SearchView()
-                    SearchResultView()
-                    
-                    if showLaunchScreen {
-                        LaunchScreenView(showLaunchScreen: $showLaunchScreen)
-                            .transition(.move(edge: .leading))
-                            .zIndex(2.0)
-                            .onDisappear {
-                                print("ContentView disappeared")
-                            }
-                    }
-                    
+                   SearchView()
                 }
             }
         }
