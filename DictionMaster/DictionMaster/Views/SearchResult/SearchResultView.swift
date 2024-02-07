@@ -10,11 +10,13 @@ import SwiftUI
 struct SearchResultView: View {
     let searchText: String
     
+    @StateObject var viewModel = DictionaryMeaningsViewModel()
+    
     var body: some View {
         ZStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: 32) {
-                    Text("Education")
+                    Text("\(searchText)")
                         .foregroundStyle(Color.theme.textPrimaryColor)
                         .font(.custom("", size: 45))
                         .bold()
@@ -36,12 +38,14 @@ struct SearchResultView: View {
                             .font(.custom("", size: 25))
                     }
                     
-                    DefinitionView(definitions: [
-                        DefinitionView.Definition(text: "Furniture with a top surface to accommodate a variety of uses.", example: "I bought a new table for the dining room."),
-                        DefinitionView.Definition(text: "A two-dimensional presentation of data.", example: ""),
-                        DefinitionView.Definition(text: "The top of a stringed instrument, particularly a member of the violin family.", example: "The violinist carefully tuned the strings at the table of the instrument.")
-                    ])
-                    
+                    ForEach(viewModel.meanings, id: \.self) { meaning in
+                        ForEach(meaning.definitions, id: \.self) { definition in
+                            DefinitionView(definitions: [
+                                DefinitionView.Definition(text: definition.definition ?? "", example: definition.example)
+                            ])
+                        }
+                    }
+
                     Divider()
                     
                     VStack(alignment: .leading, spacing: 14) {
@@ -63,7 +67,9 @@ struct SearchResultView: View {
                 .padding(.leading, 20)
             }
         }
-        .navigationTitle("Search Result")
+        .onAppear {
+            viewModel.fetchMeanings(for: searchText)
+        }
     }
 }
 #Preview {

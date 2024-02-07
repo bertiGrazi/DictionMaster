@@ -41,11 +41,14 @@ struct SearchView: View {
                     Spacer()
                     
                     NavigationLink(destination: SearchResultView(searchText: text)) {
-                        PrimaryButton(buttonText: "search") {
-                            viewModel.fetchMeanings(for: text)
-                        }
-                        .padding(.horizontal, 20)
-                        .padding(.bottom, 10)
+                        Text("SEARCH")
+                            .font(.headline)
+                            .kerning(1.8)
+                            .padding()
+                            .foregroundColor(Color.theme.whiteColor)
+                            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 64)
+                            .background(RoundedRectangle(cornerRadius: 14).fill(Color.theme.buttonColor))
+                            .padding()
                     }
                     .navigationBarHidden(true)
                 }
