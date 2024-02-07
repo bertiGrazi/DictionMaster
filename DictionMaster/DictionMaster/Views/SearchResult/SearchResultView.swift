@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 struct SearchResultView: View {
     let searchText: String
+    @State private var player: AVPlayer?
     
     @StateObject var viewModel = DictionaryMeaningsViewModel()
     
@@ -23,19 +25,22 @@ struct SearchResultView: View {
                         .padding(.top, 16)
                     
                     HStack(spacing: 12) {
-                        Button(action: {
-                            print("clicou play")
-                        }) {
+                        Button(action: playAudio) {
                             Image("audioSpeaker")
                                 .frame(width: 52, height: 52)
                                 .background(Color.theme.buttonColor)
                                 .clipShape(Circle())
                         }
                         
-                        Text("/ˌedʒuˈkeɪʃn/")
-                            .foregroundStyle(Color.theme.textSecondaryColor)
-                            .bold()
-                            .font(.custom("", size: 25))
+                        ForEach(viewModel.phonetics, id: \.self) { phonetic in
+                            if let firstPhonetics = viewModel.phonetics.first(where: { $0.text != nil }) {
+                                Text(firstPhonetics.text ?? "")
+                                    .foregroundStyle(Color.theme.textSecondaryColor)
+                                    .bold()
+                                    .font(.custom("", size: 25))
+                            }
+                        }
+
                     }
                     
                     ForEach(viewModel.meanings, id: \.self) { meaning in
@@ -69,8 +74,22 @@ struct SearchResultView: View {
         }
         .onAppear {
             viewModel.fetchMeanings(for: searchText)
+            viewModel.getWordPhonetics(for: searchText)
         }
     }
+    
+    func playAudio() {
+        if let firstPhoneticWithAudio = viewModel.phonetics.first(where: { $0.audio != nil }) {
+            guard let url = URL(string: firstPhoneticWithAudio.audio ?? "") else {
+                return
+            }
+            
+            let playerItem = AVPlayerItem(url: url)
+            player = AVPlayer(playerItem: playerItem)
+            player?.play()
+        }
+    }
+
 }
 #Preview {
     SearchResultView(searchText: "love")
