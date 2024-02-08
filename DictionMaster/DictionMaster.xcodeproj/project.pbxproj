@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B1637F772B726D2600377DCF /* PurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1637F762B726D2600377DCF /* PurchaseView.swift */; };
+		B16399BD2B752E9000BE1E02 /* LocalFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16399BC2B752E9000BE1E02 /* LocalFileManager.swift */; };
 		B1BCB4312B7151E600B83A8D /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BCB4302B7151E600B83A8D /* Color.swift */; };
 		B1BCB4352B7153DF00B83A8D /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BCB4342B7153DF00B83A8D /* LaunchScreenView.swift */; };
 		B1BCB4372B715C3200B83A8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1BCB4362B715C3200B83A8D /* LaunchScreen.storyboard */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		B1637F762B726D2600377DCF /* PurchaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseView.swift; sourceTree = "<group>"; };
+		B16399BC2B752E9000BE1E02 /* LocalFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFileManager.swift; sourceTree = "<group>"; };
 		B1BCB4302B7151E600B83A8D /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		B1BCB4342B7153DF00B83A8D /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
 		B1BCB4362B715C3200B83A8D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -100,6 +102,14 @@
 			path = Purchase;
 			sourceTree = "<group>";
 		};
+		B16399BB2B752E5A00BE1E02 /* FileManager */ = {
+			isa = PBXGroup;
+			children = (
+				B16399BC2B752E9000BE1E02 /* LocalFileManager.swift */,
+			);
+			path = FileManager;
+			sourceTree = "<group>";
+		};
 		B1BCB42F2B7151D200B83A8D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +146,7 @@
 		B1C1980B2B710F4B006CB97D /* DictionMaster */ = {
 			isa = PBXGroup;
 			children = (
+				B16399BB2B752E5A00BE1E02 /* FileManager */,
 				B1DA23BB2B73E6D800507B86 /* Service */,
 				B1307E392B73C31E00C3DF94 /* ViewModel */,
 				B1307E382B73C31600C3DF94 /* Model */,
@@ -285,6 +296,7 @@
 				B1637F772B726D2600377DCF /* PurchaseView.swift in Sources */,
 				B1DA23B62B73E65E00507B86 /* Definitions.swift in Sources */,
 				B1DA23B42B73E61D00507B86 /* Phonetics.swift in Sources */,
+				B16399BD2B752E9000BE1E02 /* LocalFileManager.swift in Sources */,
 				B1BCB4312B7151E600B83A8D /* Color.swift in Sources */,
 				B1BCB4352B7153DF00B83A8D /* LaunchScreenView.swift in Sources */,
 				B1DAB3312B717F3B0023D92A /* DefinitionView.swift in Sources */,

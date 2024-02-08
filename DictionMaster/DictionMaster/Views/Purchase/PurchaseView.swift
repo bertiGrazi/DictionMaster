@@ -68,11 +68,10 @@ struct PurchaseView: View {
             .offset(y: geometry.frame(in: .global).minY > 0 ? -geometry.frame(in: .global).minY : 0)
         }
         .edgesIgnoringSafeArea(.top)
+        .navigationBarBackButtonHidden()
     }
 }
 
 #Preview {
     PurchaseView()
 }
-
-//Try 7 Days Free, then only $19,99 per year. Cancel anytime.
