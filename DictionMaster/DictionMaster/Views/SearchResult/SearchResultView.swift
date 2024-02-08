@@ -64,10 +64,23 @@ struct SearchResultView: View {
                             .font(.custom("", size: 16))
                     }
                     
-                    PrimaryButton(buttonText: "new search") {
-                        print("botão new search")
+                    NavigationLink(destination: {
+                        if viewModel.remainingSearches >= 5 {
+                            SearchView()
+                        } else {
+                            PurchaseView()
+                        }
+                    }) {
+                        Text("SEARCH")
+                            .font(.headline)
+                            .kerning(1.8)
+                            .padding()
+                            .foregroundColor(Color.theme.whiteColor)
+                            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 64)
+                            .background(RoundedRectangle(cornerRadius: 14).fill(Color.theme.buttonColor))
+                            .padding()
                     }
-                    .padding(.trailing, 20)
+                    .navigationBarBackButtonHidden()
                 }
                 .padding(.leading, 20)
             }
