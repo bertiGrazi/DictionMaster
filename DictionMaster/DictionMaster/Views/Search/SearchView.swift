@@ -51,6 +51,7 @@ struct SearchView: View {
                             .padding()
                     }
                     .navigationBarHidden(true)
+                    .navigationBarBackButtonHidden()
                 }
             }
         }
