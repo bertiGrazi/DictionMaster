@@ -10,7 +10,6 @@
 		B1637F772B726D2600377DCF /* PurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1637F762B726D2600377DCF /* PurchaseView.swift */; };
 		B16399BD2B752E9000BE1E02 /* LocalFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16399BC2B752E9000BE1E02 /* LocalFileManager.swift */; };
 		B1BCB4312B7151E600B83A8D /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BCB4302B7151E600B83A8D /* Color.swift */; };
-		B1BCB4352B7153DF00B83A8D /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BCB4342B7153DF00B83A8D /* LaunchScreenView.swift */; };
 		B1BCB4372B715C3200B83A8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1BCB4362B715C3200B83A8D /* LaunchScreen.storyboard */; };
 		B1C1980D2B710F4B006CB97D /* DictionMasterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C1980C2B710F4B006CB97D /* DictionMasterApp.swift */; };
 		B1C1980F2B710F4B006CB97D /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C1980E2B710F4B006CB97D /* SearchView.swift */; };
@@ -34,7 +33,6 @@
 		B1637F762B726D2600377DCF /* PurchaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseView.swift; sourceTree = "<group>"; };
 		B16399BC2B752E9000BE1E02 /* LocalFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFileManager.swift; sourceTree = "<group>"; };
 		B1BCB4302B7151E600B83A8D /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		B1BCB4342B7153DF00B83A8D /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
 		B1BCB4362B715C3200B83A8D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B1C198092B710F4B006CB97D /* DictionMaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DictionMaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1C1980C2B710F4B006CB97D /* DictionMasterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionMasterApp.swift; sourceTree = "<group>"; };
@@ -121,7 +119,6 @@
 		B1BCB4332B7153C700B83A8D /* LaunchScreen */ = {
 			isa = PBXGroup;
 			children = (
-				B1BCB4342B7153DF00B83A8D /* LaunchScreenView.swift */,
 				B1BCB4362B715C3200B83A8D /* LaunchScreen.storyboard */,
 			);
 			path = LaunchScreen;
@@ -298,7 +295,6 @@
 				B1DA23B42B73E61D00507B86 /* Phonetics.swift in Sources */,
 				B16399BD2B752E9000BE1E02 /* LocalFileManager.swift in Sources */,
 				B1BCB4312B7151E600B83A8D /* Color.swift in Sources */,
-				B1BCB4352B7153DF00B83A8D /* LaunchScreenView.swift in Sources */,
 				B1DAB3312B717F3B0023D92A /* DefinitionView.swift in Sources */,
 				B1DAB32F2B716E300023D92A /* CustomFlagView.swift in Sources */,
 				B1DAB3332B718AE60023D92A /* MultiColorText.swift in Sources */,
