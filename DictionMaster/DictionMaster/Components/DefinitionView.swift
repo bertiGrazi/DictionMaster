@@ -11,15 +11,15 @@ import SwiftUI
 struct DefinitionView: View {
     var definitions: [Definition]
     
-    struct Definition {
+    struct Definition: Hashable {
         var text: String
         var example: String?
     }
     
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
-            ForEach(definitions.indices, id: \.self) { index in
-                Text("\(index+1)) \(definitions[index].text)")
+            ForEach(definitions.enumerated().map { $0 }, id: \.element) { (index, definition) in
+                Text("\(index+1)) \(definition.text)")
                     .font(.title3)
                     .foregroundColor(Color.theme.textPrimaryColor)
                     .bold()
