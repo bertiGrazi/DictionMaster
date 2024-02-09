@@ -57,19 +57,17 @@ final class DictionaryMeaningsViewModel: ObservableObject {
     
     public func fetchMeanings(for word: String) {
         if let cachedResult = manager.loadResultsFromCache(for: word) {
-            let meaningsFromCache = cachedResult.compactMap { meaningsString -> Meanings? in
-                guard let data = meaningsString.data(using: .utf8) else {
-                    return nil
-                }
-                
+            if let combinedData = cachedResult.joined().data(using: .utf8) {
                 do {
-                    return try JSONDecoder().decode(Meanings.self, from: data)
+                    let decoder = JSONDecoder()
+                    let dictionaryResponse = try decoder.decode(DictionaryResponse.self, from: combinedData)
+                    meanings = dictionaryResponse.meanings ?? []
                 } catch {
-                    print("Error decoding cached meanings: \(error)")
-                    return nil
+                    print("Error decoding cached meanings for word '\(word)': \(error)")
                 }
+            } else {
+                print("Error converting cached data to Data for word '\(word)'")
             }
-            meanings = meaningsFromCache
         } else {
             if remainingSearches > 0 {
                 service.getWordMeanings(for: word) { [weak self] result in
@@ -77,21 +75,25 @@ final class DictionaryMeaningsViewModel: ObservableObject {
                         switch result {
                         case .success(let models):
                             self?.meanings = models
+
+                            do {
+                                let encoder = JSONEncoder()
+                                let meaningsData = try encoder.encode(models)
+                                let meaningsString = String(data: meaningsData, encoding: .utf8) ?? ""
+                                self?.manager.saveResultsFromCache([meaningsString], for: word)
+                            } catch {
+                                print("Error saving meanings to cache for word '\(word)': \(error)")
+                            }
                             
-                            let meaningsStrings = models.map { try? JSONEncoder().encode($0) }
-                            let meaningsStringsNotNil = meaningsStrings.compactMap { $0 }
-                            let meaningsStringsText = meaningsStringsNotNil.map { String(data: $0, encoding: .utf8) ?? "" }
-                            self?.manager.saveResultsFromCache(meaningsStringsText, for: word)
                             self?.remainingSearches -= 1
-                            
-                            print("GRAAAZIIIII \(word)")
-                           
-                            
-                        case .failure:
-                            break
+                            print("Successfully fetched and cached meanings for word '\(word)'")
+                        case .failure(let error):
+                            print("Error fetching meanings for word '\(word)': \(error)")
                         }
                     }
                 }
+            } else {
+                print("Remaining searches exhausted for word '\(word)'.")
             }
         }
     }

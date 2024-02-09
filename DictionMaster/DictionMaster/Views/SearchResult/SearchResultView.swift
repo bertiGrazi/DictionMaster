@@ -71,8 +71,10 @@ struct SearchResultView: View {
                         NavigationLink(destination: {
                             if viewModel.remainingSearches <= 5 {
                                 SearchView()
+                                    .navigationBarBackButtonHidden()
                             } else {
                                 PurchaseView()
+                                    .navigationBarBackButtonHidden()
                             }
                         }) {
                             Text("NEW SEARCH")
@@ -111,7 +113,7 @@ struct SearchResultView: View {
 
 }
 #Preview {
-    SearchResultView(searchText: "love")
+    SearchResultView(searchText: "Pig")
 }
 
 
